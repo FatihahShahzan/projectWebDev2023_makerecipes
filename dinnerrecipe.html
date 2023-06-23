@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+    
+        <a href="#" class="logo">Dinner Recipes<span>.</span></a>
+    
+        <nav class="navbar">
+            <a href="homepage.html">home</a>
+            <a href="aboutus.html">about</a>
+            <a href="homepage.html #recipes">recipes</a>
+            <a href="review.html">review</a>
+            <a href="myacc.php">contacts</a>
+        </nav>
+    
+        <div class="icon">
+      
+            <a href="homepage.html #recipes" class="fas fa-utensils"></a>  
+            <a href="myacc.php" class="fas fa-phone"></a>
+        </div>
+    </header>
+  </head>
+  <title>Dinner Recipes</title>
+  <style>
+    :root {
+      --pink: #e84393;
+      --white-smoke: #f5f5f5;
+      --black:#0f0e0e;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      outline: none;
+      border: none;
+      text-decoration: none;
+      text-transform: capitalize;
+      transition: .2s linear;
+    }
+
+    html {
+      font-size: 62.5%;
+      scroll-behavior: smooth;
+      scroll-padding: 6rem;
+      overflow-x: hidden;
+    }
+
+    body {
+      background-color: var(--white-smoke);  
+     margin: 0;
+     background-image: linear-gradient(to bottom, #f6a6b6, #f8aab7, #faaeb8, #fbb2b9, #fdb6ba, #febdb8, #fec4b7, #fdccb8, #f7d8bd, #f1e3c7, #ededd5, #edf6e5);  background-attachment: fixed;
+  background-size: cover;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin:  auto;
+      padding: 02rem 9%;
+      display: flex-grow;
+      justify-content: center;
+    }
+
+    .home-link {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: var(--pink);
+      font-size: 2rem;
+      text-decoration: none;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 3rem;
+      color: #fff;
+    }
+
+    .menu {
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.2s linear;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align: center;
+    }
+
+    .menu:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu-title {
+      font-size: 9rem;
+      margin-bottom: 0;
+      color: var(--pink);
+    }
+
+    .menu-image {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 0;
+    }
+
+    .menu-details {
+      display: none;
+      margin-top: 1rem;
+    }
+
+    .menu.open .menu-details {
+      display: block;
+    }
+
+    .dish-type {
+      margin-bottom: 1rem;
+      color: var(--pink);
+    }
+
+    .dish-list {
+      list-style: disc;
+      margin-left: 2rem;
+      text-align:left;
+      font-size: 1.2rem;
+    }
+
+    .dish-list-item {
+      margin-bottom: 0.2rem;
+      cursor: pointer;
+      text-align:left;
+      font-size: 1.2rem;
+    }
+
+    .dish-step {
+      display: none;
+      margin-bottom: 1rem;
+      color: var(--black);
+      text-align:left;
+      font-size: 1.2rem;
+
+    }
+    .dish-step-content {
+    display: flex;
+    align-items: center;
+    }
+
+    .dish-list-item.open .dish-step {
+      display: block;
+      text-align:left;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 class="heading"></h2>
+
+  <div class="container">
+    <div class="menu" onclick="toggleDetails(this)">
+      <h2 class="menu-title">Dinner Menu</h2>
+      <img class="menu-image" src="dinne.png.png" alt="Breakfast Menu">
+      <div class="menu-details">
+        <h3 class="dish-type">Dishes:</h3>
+        <ul class="dish-list">
+          <li class="dish-list-item" onclick="toggleSteps(this)">
+            <b>MAGGI GORENG BASAH </b>
+            <div class="dish-step" >
+                <div class="dish-step-content">
+                    <img class="menu-image" src="maggie goreng basah.png" alt="Breakfast Menu" style="float: right">
+                    <ol>
+                        <B>Cara Penyediaan Maggi Goreng Basah:</B>
+                        <li>Potong bawang putih, tomato, sayur sawi (asingkan batang dan daun), cili padi, kubis cina, daun bawang dan isi ayam.</li>
+                        <li>Celur maggi dalam air mendidih sekejap (agak-agak lembut terlerai). Kemudian bilas dengan air sejuk (untuk stop proses masak).</li>
+                        <li>Panaskan minyak dan tumis bawang putih.</li>
+                        <li>Bila bawang naik bau, masukkan cili kisar sehingga pecah minyak.</li>
+                        <li>Masukkan isi ayam, serbuk lada putih dan kacau separuh masak</li>
+                        <li>Masuk sos cili, sos tomato dan sos tiram.</li>
+                        <li>Masukkan batang sawi dan kubis (bahagian keras).</li>
+                        <li>Masukkan udang (pilihan) dan serbuk perencah maggi.</li>
+                        <li>Tuang air, kicap pekat manis dan maggi yang dah celur tadi.</li>
+                        <li>Masukkan tomato, daun sawi dan daun kubis cina.</li>
+                        <li>Boleh adjust dengan air, kicap dan garam.</li>
+                        <li>Masukkan cili padi.</li>
+                        <li>Hidang dengan taburan daun bawang dan limau nipis
+                        </li>
+                      </ol>
+                 </div></div>
+                </li>
+          <li class="dish-list-item" onclick="toggleSteps(this)">
+           <b>CHICKEN CHOP </b>
+            <div class="dish-step">
+                <div class="dish-step-content">
+                    <img class="menu-image" src="chicken chop 1.png" alt="Breakfast Menu" style="float: left">
+                    <ol style="text-align: left; margin-left: 20px;">
+                        <b>Cara Penyediaan chicken Chop:</b>
+                        <b>Penyediaan Sos Black Pepper</b>
+                        <li>Cairkan mentega ke dalam periuk ,tumis bawang besar hingga layu dan wangi.Masukkan lada hitam yang ditumbuk kasar, tumis sekejap.</li>
+                        <li>Kemudian masukkan tepung gandum dan kacau selalu.</li>
+                        <li>Masukkan air. Kacau sebati (guna hand whisk)</li>
+                        <li>Masukkan kiub ayam, sos lada hitam, sos tiram dan kicap. Kacau sebati.</li>
+                        <li>Ubah suai sukatan air untuk kepekatan yang anda inginkan.</li>
+                      </ol>
+                      <ol style="text-align: left; margin-left: 20px;">
+                        <b>Penyediaan Coleslaw & Kentang Goreng</b>
+                        <li>Hiris atau sagat halus kobis dan lobak merah.</li>
+                        <li>Gaulkan kobis dan lobak merah dengan mayonis sebati mengikut cita rasa.</li>
+                        <li>Goreng kentang mengikut sukatan citarasa sendiri.</li>
+                        <li>Panaskan minyak yang telah digunakan untuk masak ayam tadi, dan sedia dimasak hingga keperangan.</li>
+                      </ol>
+                      <ol style="text-align: left; margin-left: 20px;">
+                        <b>Penyediaan Ayam</b>
+                        <li>Perap ayam dengan tepung gandum dan tepung beras selama 3 jam atau semalaman.</li>
+                        <li>Lumurkan ayam yang telah diperap dengan breadcrumbs.</li>
+                        <li>Panaskan minyak dan goreng sehingga kedua belah permukaan ayam berwarna keperangan dan masak.</li>
+                        <li>Hidangkan Ayam,Kentang,Coleslow dan Sos</li>
+                      </ol>
+            </div></div><br>
+          </li>
+          <li class="dish-list-item" onclick="toggleSteps(this)">
+           <b>NASI PUTIH ,SIAKAP 3 RASA ,TOMYUM</b>
+            <div class="dish-step">
+                <div class="dish-step-content">
+                     <img class="menu-image" src="siakap 3 rasa.png" alt="Breakfast Menu" style="float: left">
+                     <ol>
+                        <b>Cara Penyediaan Ikan Siakap 3 Rasa:</b>
+                        <li>Ikan dibersihkan dilumurkan dengan garam, kunyit dan tepung jagung, goreng dalam minyak yang betul-betul panas sehingga garing, angkat dan ketepikan.</li>
+                        <li>Dalam kuali yang berasingan, tumiskan bawang putih, bawang merah dan cili kisar sehingga pecah minyak.</li>
+                        <li>Masukkan halia, serai, bunga kantan dan cili padi, kacau seketika</li>
+                        <li>Masukkan tomato, sos cili, sos tomato, sos tiram, sos ikan dan masak sehingga kuah pekat. Jika terlalu pekat masukkan sedikit air.</li>
+                        <li>Masukkan daun limau purut dan kacau sehingga kuah pekat sebati.</li>
+                        <li>Tuangkan kuah diatas ikan yang digoreng tadi.</li>
+                        <li>Hiaskan dengan daun bawang.</li>
+                        </ol></div>
+                        <div class="dish-step-content">
+                            <img class="menu-image" src="tomyum2.png" alt="Breakfast Menu" style="float: right">
+                        <ol>
+                            <b>Cara Penyediaan Tom Yum Thai Campur:</b>
+                            <li>Masukkan semua bahan-bahan rebusan A sekaligus ke dalam periuk dan masak sehingga mendidih.</li>
+                            <li>Masukkan pula karot diikuti isi ayam, bawang holland, pes tomyam, cendawan tiram yang diracik halus, tomato, sos ikan, sotong, udang dan susu cair.</li>
+                            <li>Kacau seketika tetapi jangan lama kerana takut udang dan sotong terlebih masak. Anggaran 30 saat sahaja.</li>
+                            <li>Masukkan jus limau nipis dan terus tutup api. Jus limau tidak boleh dimasak terlalu lama kerana nanti rasanya akan menjadi tidak enak.</li>
+                            <li>Taburkan dengan hirisan daun ketumbar sebagai penambah aroma dan hiasan.</li>
+                        </ol>
+                      </div></div>
+            </li>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <a href="lunchrecipe.html" style="float: right;" >
+        <img src="lunchicon.png" width="90px" margin="10px" >
+    </a>
+    <a href="breakfastrecipe.html" style="float: right;">
+        <img src="breakfasticon.png" width="90px" margin="10px">
+        </a>
+  <script>
+    function toggleDetails(menu) {
+      menu.classList.toggle('open');
+    }
+
+    function toggleSteps(dish) {
+      dish.classList.toggle('open');
+    }
+  </script>
+
+<section class="footer">
+
+  <div class="box-container">
+
+      <div class="box">
+          <h3>quick links</h3>
+          <a href="homepage.html">home</a>
+          <a href="aboutus.html">about</a>
+          <a href="homepage.html #recipes">recipes</a>
+          <a href="review.html">review</a>
+          <a href="myacc.php">contacts</a>
+      </div>
+
+  <div class="box">
+      <h3>contact info</h3>
+      <a href="#">0123456789</a>
+      <a href="#">mNm@gmail.com</a>
+      <a href="https://www.google.com/maps/place/Johor/@2.0488817,102.388586,8z/data=!4m6!3m5!1s0x31c4cc3289eddb9f:0x7b6b329bbf0cadb4!8m2!3d1.9343998!4d103.3587288!16zL20vMDFqbmc5?entry=ttu">Johor, Malaysia</a>
+  </div>
+
+  </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+    
+        <a href="#" class="logo">Lunch Recipes<span>.</span></a>
+    
+        <nav class="navbar">
+            <a href="homepage.html">home</a>
+            <a href="aboutus.html">about</a>
+            <a href="homepage.html #recipes">recipes</a>
+            <a href="review.html">review</a>
+            <a href="myacc.php">contacts</a>
+        </nav>
+    
+        <div class="icon">
+           
+            <a href="homepage.html #recipes" class="fas fa-utensils"></a>  
+            <a href="myacc.php" class="fas fa-phone"></a>
+        </div>
+    </header>
+    </head>
+  <title>Lunch Recipes</title>
+  <style>
+    :root {
+      --pink: #e84393;
+      --white-smoke: #f5f5f5;
+      --black:#0f0e0e;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      outline: none;
+      border: none;
+      text-decoration: none;
+      text-transform: capitalize;
+      transition: .2s linear;
+    }
+
+    html {
+      font-size: 62.5%;
+      scroll-behavior: smooth;
+      scroll-padding: 6rem;
+      overflow-x: hidden;
+    }
+
+    body {
+      background-color: var(--white-smoke);  
+     margin: 0;
+     background-image: linear-gradient(to bottom, #f6a6b6, #f8aab7, #faaeb8, #fbb2b9, #fdb6ba, #febdb8, #fec4b7, #fdccb8, #f7d8bd, #f1e3c7, #ededd5, #edf6e5);  background-attachment: fixed;
+  background-size: cover;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin:  auto;
+      padding: 02rem 9%;
+      display: flex-grow;
+      justify-content: center;
+    }
+
+    .home-link {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: var(--pink);
+      font-size: 2rem;
+      text-decoration: none;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 3rem;
+      color: #fff;
+    }
+
+    .menu {
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.2s linear;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align: center;
+    }
+
+    .menu:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu-title {
+      font-size: 9rem;
+      margin-bottom: 0;
+      color: var(--pink);
+    }
+
+    .menu-image {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 0;
+    }
+
+    .menu-details {
+      display: none;
+      margin-top: 1rem;
+    }
+
+    .menu.open .menu-details {
+      display: block;
+    }
+
+    .dish-type {
+      margin-bottom: 1rem;
+      color: var(--pink);
+    }
+
+    .dish-list {
+      list-style: disc;
+      margin-left: 2rem;
+      text-align:left;
+      font-size: 1.2rem;
+    }
+
+    .dish-list-item {
+      margin-bottom: 0.2rem;
+      cursor: pointer;
+      text-align:left;
+      font-size: 1.2rem;
+    }
+
+    .dish-step {
+      display: none;
+      margin-bottom: 1rem;
+      color: var(--black);
+      text-align:left;
+      font-size: 1.2rem;
+
+    }
+    .dish-step-content {
+    display: flex;
+    align-items: center;
+    }
+
+    .dish-list-item.open .dish-step {
+      display: block;
+      text-align:left;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 class="heading"></h2>
+  
+  <div class="container">
+    <div class="menu" onclick="toggleDetails(this)">
+        <h2 class="menu-title">Lunch Menu</h2>
+        <img class="menu-image" src="lunch.png.png" alt="Lunch Menu">
+        <div class="menu-details">
+          <h3 class="dish-type">Dishes:</h3>
+          <ul class="dish-list">
+            <li class="dish-list-item" onclick="toggleSteps(this)">
+              <b>NASI AYAM ,PUDDING ROTI</b>
+              <div class="dish-step">
+                <div class="dish-step-content">
+                    <img class="menu-image" src="1.png" alt="Breakfast Menu" style="float: right">
+                <ol>
+                  <b>Cara Penyedian Nasi Ayam:</b>
+                  <ol><b>Penyediaan Ayam</b>
+                  <li>Bersihkan ayam, toskan air dan lumurkan dgn 2 ulas bawang putih dan halia yg diketuk.</li>
+                  <li>Rebus ayam bersama 1 kiub ayam sehingga empuk.</li>
+                  <li>Angkat ayam dan perap dengan bahan perap selama 1/2 jam (rujuk bahan perap untuk ayam)</li>
+                  <li>Kemudian goreng dalam kepanasan api sederhana seketika, angkat dan sapukan dengan madu.</li></ol>
+                  <ol><b>Penyediaan Nasi</b>
+                  <li>Basuh beras dan tos air.</li>
+                  <li>Panaskan butter lalu tumiskan rempah tumis(*), daun pandan, serai, halia serta bawang putih hingga garing. Masukkan beras dan masak seketika sehingga naik aroma dan bau. Masukkan air rebusan ayam, garam dan kunyit secukupnya. Masak nasi seperti biasa.</li><ol>
+                  <ol><b>Penyedian Sup</b>
+                  <li>Rebus air rebusan ayam bersama rempah sup bunjut, bawang besar, dan masukkan garam secukup rasa. Taburkan dengan bawang goreng dan hirisan daun sup.</li></ol>
+                  <ol><b>Penyedian Sos</b>
+                  <li>Kisarkan cili merah,bawang putih,halia,cuka,garam dan air rebusan ayam.</li>
+                  <li>Boleh juga dimasak sebentar untuk menaikkan aroma.</li>
+                </ol></div>
+                <div class="dish-step-content">
+                    <img class="menu-image" src="2.png" alt="Breakfast Menu" style="float: right">
+                <ol style="text-align: left; margin-left: 20px;">
+                  <b>Cara Penyedian Pudding Roti</b>
+                  <b>Penyediaan puding roti</b>
+                  <li>Potong roti 8 bahagian.</li>
+                  <li>Sapu atau gris mentega/majerin pada dulang pembakar.</li>
+                  <li>Susun potongan roti didalam dulang pembakar.</li>
+                  <li>Dalam bekas lain, masukkan susu full cream bersama gula, esen vanilla, serbuk kulit kayu manis, secubit garam dan telur. Kacau sebati semua bahan.</li>
+                  <li>Panaskan mentega sehingga cair, lalu tuang mentega diatas roti.</li>
+                  <li>Taburkan kismis dan tuang adunan susu kedalam roti. Tekan roti supaya tenggelam dan menyerap adunan.</li>
+                  <li>Rehatkan lebih kurang 5-10 minit.</li>
+                  <li>Tabur gula perang secukupnya atas adunan roti, lalu bakar dengan suhu 170˚C selama 25-30 minit sehingga puding roti masak dan permukaan roti menjadi perang.</li></ol>
+                  <ol style="text-align: left; margin-left: 20px;">
+                  <b>Penyediaan Sos Kastard</b>
+                  <li>Masukkan susu cair, gula, tepung kastard dan secubit garam. Kacau bahan sehingga larut sepenuhnya.</li>
+                  <li>Setelah larut, masukkan air dan panaskan adunan sos kastard. Masak sehingga sos kastard masak dan pekat sekata.</li>
+                  <li>Sesudah siap dibakar, sapu dengan mentega cair pada permukaan roti yang masih suam-suam panas.</li>
+                  <li>Potong puding roti dan hidangkan bersama sos kastard.</li></ol>
+              </div></div>
+            </li>
+            <li class="dish-list-item" onclick="toggleSteps(this)">
+              <b>NASI PUTIH ,AYAM MASAK LEMAK CILI API,PUDDING KARAMEL</b>
+              <div class="dish-step">
+                <div class="dish-step-content">
+                    <img class="menu-image" src="4.png" alt="Breakfast Menu" style="float: right">
+                <ol>
+                  <b>Cara Penyediaan Ayam Masak Lemak Cili Api</b>
+                  <li>Bersihkan ayam dan ketepikan.</li>
+                  <li>Panaskan kuali di atas api yang perlahan. Masukkan ayam tadi ke dalam kuali tanpa minyak dan masak sehingga kering air yang keluar dari ayam. Ini adalah supaya ayam nanti tidak berbau hanyir.</li>
+                  <li>Masukkan pula cili padi dan kunyit yang sudah ditumbuk halus ke dalam kjuali bersama ayam dan gaul sebati selama beberapa minit, angkat ayam dan bersedia untuk langkah seterusnya.</li>
+                  <li>Dalam kuali yang sama, masukkan santan dan serai. Masak di atas api perlahan sehingga mendidih dan kemudian masukkan kembali ayam tadi bersama daun kunyit dan asam gelugor.</li>
+                  <li>Teruskan kacau supaya santan tidak pecah. Boleh tambah air jika kuah terlalu pekat.</li>
+                  <li>Angkat dan hias dengan taburan hirisan daun kunyit.</li>
+                </ol></div>
+                <div class="dish-step-content">
+                    <img class="menu-image" src="6.png" alt="Breakfast Menu" style="float: right">
+                <ol>
+                  <b>Cara Penyediaan Pudding Karamel:</b>
+                  <li>Untuk membuat lapisan karamel ,Masak gula dengan air sehingga gula cair dan naik buih.</li>
+                  <li>Apabila sudah keperangan, masukkan gula caramel kedalam loyang dan ratakan karamel pada permukaan loyang.</li>
+                  <li>Seterusnya,untuk lapisan pudding Kacau perlahan telur dan kuning telur, lalu masukkan esen vanila.</li>
+                  <li>Masak susu full cream, gula dan secubit garam. Masak sehingga naik asap, berbuih sedikit dan tidak perlu masak sehingga mendidih.</li>
+                  <li>Tuang adunan susu suam kedalam telur sedikit demi sedikit sambil mengacau perlahan adunan.</li>
+                  <li>Tapis adunan puding, lalu tuangkan kedalam loyang lapisan karamel dengan perlahan.</li>
+                  <li>Tutup loyang dengan aluminium foil, dan masak puding karamel samada dengan cara mengukus atau membakar.</li>
+                  <li>Bagi kaedah water bath dan bakar, masukkan loyang kedalam loyang yang lebih besar lalu tuang air panas kedalam loyang besar.</li>
+                  <li>Bakar puding karamel pada suhu 160˚ dalam anggaran selama 50 minit.</li>
+                  <li>Kemudian, sejukkan dalam peti sejuk dalam beberapa jam ataupun semalaman.</li>
+                  <li>Lorekkan bahagian tepi puding lalu terbalikkan puding karamel untuk dihidang.</li>
+                </ol>
+              </div></div><br>
+            </li>
+            <li class="dish-list-item" onclick="toggleSteps(this)">
+              <b>NASI PUTIH,IKAN GORENG SAMBAL BELADA,KOKTEL</b>
+              <div class="dish-step">
+                <div class="dish-step-content">
+                    <img class="menu-image" src="8.png" alt="Breakfast Menu" style="float: right">
+                <ol>
+                  <b>Cara Penyediaan Ikan Goreng Sambal Belada:</b>
+                  <li>Gorengkan ikan yang telah digaul bersama2 dengan kunyit dan garam. ketepikan.</li>
+                  <li>Kisarkan bahan2 yang bertanda **.</li>
+                  <li>Tumiskan bahan2 yang dikisar tadi sehingga cili benar2 masak .</li>
+                  <li>Masukkan garam dan gula secukup rasa.</li>
+                  <li>Masukkan perahan jus limau nipis dan gaul rata.</li>
+                  <li>Apabila sudah masak, tuangkan tumisan ke atas ikan dan siap untuk dihidangkan.</li>
+                </ol></div>
+                <div class="dish-step-content">
+                    <img class="menu-image" src="9.png" alt="Breakfast Menu" style="float: right">
+                <ol>
+                  <b> Cara Penyediaan Koktel</b>
+                  <li>Potong dadu buah naga, epal merah, epal hijau, mangga kuning serta belah dua buah anggur.</li>
+                  <li>Satukan kesemuanya dalam mangkuk yang besar.</li>
+                  <li>Tuangkan 1 tin laici, susu cair, yogurt dan susu pekat. Kacau sehingga sebati.</li>
+                  <li>Masukkan sagu yang telah dimasak. Gaul rata.</li>
+                  <li>Akhir sekali masukkan ais. Siap untuk dinikmati.</li>
+                </ol>
+              </div></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    <a href="breakfastrecipe.html" style="float: right;" >
+        <img src="breakfasticon.png" width="100px" margin="10px" >
+    </a>
+
+    <a href="dinnerrecipe.html" style="float: right;">
+        <img src="dinnericon.png" width="90px" margin="10px">
+        </a>
+  <script>
+    function toggleDetails(menu) {
+      menu.classList.toggle('open');
+    }
+
+    function toggleSteps(dish) {
+      dish.classList.toggle('open');
+    }
+  </script>
+
+<section class="footer">
+
+  <div class="box-container">
+
+      <div class="box">
+          <h3>quick links</h3>
+          <a href="homepage.html">home</a>
+          <a href="aboutus.html">about</a>
+          <a href="homepage.html #recipes">recipes</a>
+          <a href="review.html">review</a>
+          <a href="myacc.php">contacts</a>
+      </div>
+
+  <div class="box">
+      <h3>contact info</h3>
+      <a href="#">0123456789</a>
+      <a href="#">mNm@gmail.com</a>
+      <a href="https://www.google.com/maps/place/Johor/@2.0488817,102.388586,8z/data=!4m6!3m5!1s0x31c4cc3289eddb9f:0x7b6b329bbf0cadb4!8m2!3d1.9343998!4d103.3587288!16zL20vMDFqbmc5?entry=ttu">Johor, Malaysia</a>
+  </div>
+
+  </div>
+</section>
+</body>
+</html>

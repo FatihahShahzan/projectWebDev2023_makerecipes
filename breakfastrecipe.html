@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+    
+        <a href="#" class="logo">Breakfast Recipes<span>.</span></a>
+    
+        <nav class="navbar">
+            <a href="homepage.html">home</a>
+            <a href="aboutus.html">about</a>
+            <a href="homepage.html #recipes">recipes</a>
+            <a href="review.html">review</a>
+            <a href="myacc.php">contacts</a>
+        </nav>
+    
+        <div class="icon">
+            
+            <a href="homepage.html #recipes" class="fas fa-utensils"></a>  
+            <a href="myacc.php" class="fas fa-phone"></a>
+        </div>
+    </header>
+</head>
+  <title>Breakfast Recipes</title>
+  <style>
+    :root {
+      --pink: #e84393;
+      --white-smoke: #f5f5f5;
+      --black:#0f0e0e;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      outline: none;
+      border: none;
+      text-decoration: none;
+      text-transform: capitalize;
+      transition: .2s linear;
+    }
+
+    html {
+      font-size: 62.5%;
+      scroll-behavior: smooth;
+      scroll-padding: 6rem;
+      overflow-x: hidden;
+    }
+
+    body {
+      background-color: var(--white-smoke);  
+     margin: 0;
+     background-image: linear-gradient(to bottom, #f6a6b6, #f8aab7, #faaeb8, #fbb2b9, #fdb6ba, #febdb8, #fec4b7, #fdccb8, #f7d8bd, #f1e3c7, #ededd5, #edf6e5);  background-attachment: fixed;
+  background-size: cover;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin:  auto;
+      padding: 02rem 9%;
+      display: flex-grow;
+      justify-content: center;
+    }
+
+    .home-link {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: var(--pink);
+      font-size: 2rem;
+      text-decoration: none;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 3rem;
+      color: #fff;
+    }
+
+    .menu {
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.2s linear;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align: center;
+    }
+
+    .menu:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu-title {
+      font-size: 9rem;
+      margin-bottom: 0;
+      color: var(--pink);
+    }
+
+    .menu-image {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 0;
+    }
+
+    .menu-details {
+      display: none;
+      margin-top: 1rem;
+    }
+
+    .menu.open .menu-details {
+      display: block;
+    }
+
+    .dish-type {
+      margin-bottom: 1rem;
+      color: var(--pink);
+    }
+
+    .dish-list {
+      list-style: disc;
+      margin-left: 2rem;
+      text-align:left;
+      font-size: 1.2rem;
+    }
+
+    .dish-list-item {
+      margin-bottom: 0.2rem;
+      cursor: pointer;
+      text-align:left;
+      font-size: 1.2rem;
+    }
+
+    .dish-step {
+      display: none;
+      margin-bottom: 1rem;
+      color: var(--black);
+      text-align:left;
+      font-size: 1.2rem;
+
+    }
+    .dish-step-content {
+    display: flex;
+    align-items: center;
+    }
+
+    .dish-list-item.open .dish-step {
+      display: block;
+      text-align:left;
+    }
+  </style>
+</head>
+<body>
+  <h2 class="heading"></h2>
+  
+  <div class="container">
+    <div class="menu" onclick="toggleDetails(this)">
+      <h2 class="menu-title">Breakfast Menu</h2>
+      <img class="menu-image" src="break.png.png" alt="Breakfast Menu">
+      <div class="menu-details">
+        <h3 class="dish-type">Dishes:</h3>
+        <ul class="dish-list">
+          <li class="dish-list-item" onclick="toggleSteps(this)">
+            <b>NASI LEMAK  </b>
+            <div class="dish-step" >
+                <div class="dish-step-content">
+                    <img class="menu-image" src="nasi lemak.png" alt="Breakfast Menu" style="float: right">
+              <ol >
+                <b>Cara Penyediaan:</b>
+                <li>Basuh beras dan toskan.</li>
+                <li>Panaskan minyak di atas dapur dan tumis bawang, halia, halba, serai dan daun pandan sehingga bawang lembut dan naik bau.</li>
+                <li>Masukkan beras dan kacau seketika</li>
+                <li>Masukkan santan anggaran sehingga air satu ruas jari.</li>
+                <li>Masukkan garam secukup rasa dan kacau sedikit supaya garam larut sekata.</li>
+                <li>Tutup penutup dan pindah ke periuk nasi elektrik. Jika tidak, anda boleh teruskan masak di atas api sehingga masak. </li>
+                <li>Hidangkan nasi bersama timun,kacang,ikan bilis goreng,telur dan ayam goreng</li>
+              </ol>
+            </div></div>
+          </li>
+          <li class="dish-list-item" onclick="toggleSteps(this)">
+           <b>LEMPENG KELAPA </b>
+            <div class="dish-step">
+                <div class="dish-step-content">
+                    <img class="menu-image" src="lempeng kelapa.png" alt="Breakfast Menu" style="float: right">
+              <ol>
+                <b>Cara Penyediaan:</b>
+                <li>Campurkan tepung beras, tepung ubi kayu, kelapa parut, gula merah parut, dan garam dalam sebuah mangkuk besar. Aduk rata hingga semua bahan.</li>
+                <li>Tambahkan air sedikit demi sedikit sambil terus mengaduk, hingga adunan menjadi kental dan licin. Pastikan adunan tidak terlalu cair.</li>
+                <li>Panaskan minyak dalam kuali dengan api sederhana.</li>
+                <li>Ambil satu senduk makan adunan lempeng kelapa dan tuang ke dalam minyak panas. </li>
+                <li>Biarkan lempeng kelapa dimasak sehingga berwarna keemasan di bahagian bawah, kemudian terbalikkan dan tunggu sehingga kedua belah sisi keemasan.</li>
+                <li>Angkat lempeng kelapa yang sudah masak.</li>
+                <li>Ulang langkah 4-6 sehingga adunan habis.</li>
+                <li>Sajikan lempeng kelapa dalam keadaan hangat.</li>
+              </ol>
+            </div></div>
+          </li>
+          <li class="dish-list-item" onclick="toggleSteps(this)">
+           <b>ROTI BAKAR,TELUR SEPARUH MASAK</b>
+            <div class="dish-step">
+                <div class="dish-step-content"></div>
+                     <img class="menu-image" src="half cookedegg,toast.png" alt="Breakfast Menu" style="float: left">
+              <ol>
+                <b>Cara Penyedian Roti Bakar:</b>
+                <li>Panaskan pembakar roti atau kuali anti lekat di atas api sederhana.</li>
+                <li>Ambil sekeping roti dan sapu sebelah sisi roti dengan mentega. </li>
+                <li>Letakkan kepingan roti yang telah disapu mentega dengan sisi mentega menghadap ke bawah di atas pembakar roti atau kuali.</li>
+                <li>Bakar roti tersebut sehingga kedua sisi menjadi keemasan. </li>
+                <li>Jika menggunakan kuali, terbalikkan roti perlahan-lahan untuk membakar kedua-dua sisi roti.</li>
+                <li>Setelah roti siap dimasak, angkat dari pembakar roti atau kuali.</li>
+                <li>Sajikan roti bakar dengan segera sementara masih hangat.</li>
+              </ol>
+              <ol>
+                <b>Cara Penyedian Telur Separuh Masak:</b>
+                <li>Mula-mula didihkan air di dalam periuk kecil di atas dapur api. Kuantiti air agak-agak telur boleh terendam sepenuhnya.</li>
+                <li>Setelah air betul-betul mendidih, matikan api dan masukkan telur (2 hingga 4 biji telur). </li>
+                <li>Mulakan kiraan dengan stopwatch. Boleh guna timer, jam atau apps stopwatch di handphone masing-masing. Biarkan rendaman telur selama 7 minit. (Nota : Maksimum 8 minit)</li>
+                <li>Setelah 7 minit, angkat dan buang air panas tersebut. Gantikan dengan air sejuk dan biarkan selama lebih kurang 1 minit untuk sejukkan telur (menghentikan proses telur masak).</li>
+                <li>Telur sudah sedia untuk dihidang.Boleh dimakan begitu sahaja atu dengan tambahan sedikit garam, lada sulah mahupun kicap.</li>
+              </ol>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <a href="lunchrecipe.html" style="float: right;" >
+        <img src="lunchicon.png" width="100px" margin="10px" >
+    </a>
+    <a href="dinnerrecipe.html" style="float: right;">
+        <img src="dinnericon.png" width="90px" margin="10px">
+        </a>
+  <script>
+    function toggleDetails(menu) {
+      menu.classList.toggle('open');
+    }
+
+    function toggleSteps(dish) {
+      dish.classList.toggle('open');
+    }
+  </script>
+   <section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="homepage.html">home</a>
+            <a href="aboutus.html">about</a>
+            <a href="homepage.html #recipes">recipes</a>
+            <a href="review.html">review</a>
+            <a href="myacc.php">contacts</a>
+        </div>
+
+    <div class="box">
+        <h3>contact info</h3>
+        <a href="#">0123456789</a>
+        <a href="#">mNm@gmail.com</a>
+        <a href="https://www.google.com/maps/place/Johor/@2.0488817,102.388586,8z/data=!4m6!3m5!1s0x31c4cc3289eddb9f:0x7b6b329bbf0cadb4!8m2!3d1.9343998!4d103.3587288!16zL20vMDFqbmc5?entry=ttu">Johor, Malaysia</a>
+    </div>
+
+    </div>
+</section>
+</body>
+</html>

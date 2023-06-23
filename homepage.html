@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make and Makey</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+      function displayRecipeB() {
+        // Redirect the user to the breakfast recipes page
+        window.location.href = "breakfastrecipe.html";
+      }
+      function displayRecipeL() {
+        // Redirect the user to the Lunch recipes page
+        window.location.href = "lunchrecipe.html";
+      }
+      function displayRecipeD() {
+        // Redirect the user to the dinner recipes page
+        window.location.href = "dinnerrecipe.html";
+      }
+    </script>
+    
+      
+</head>
+<body>
+ <!--home section-->   
+<header>
+    <input type="checkbox" name="" id="toggler">
+    <label for="toggler" class="fas fa-bars"></label>
+
+    <a href="#" class="logo">Make&makey recipe<span>.</span></a>
+
+    <nav class="navbar">
+      <a href="homepage.html">home</a>
+      <a href="aboutus.html">about</a>
+      <a href="#recipes">recipes</a>
+      <a href="review.html">review</a>
+      <a href="myacc.php">contacts</a>
+    </nav>
+
+    <div class="icon">
+        
+        <a href="homepage.html #recipes" class="fas fa-utensils"></a>  
+        <a href="myacc.php" class="fas fa-phone"></a>
+        
+    </div>
+</header>
+
+<section class="home" id="home">
+    <div class="content">
+        <h3>Make & Makey </h3>
+        <span> Good and Full Nyums</span>
+        <p> Hello kita kene makan untuk hidup hidup untuk makan dan teruskan lah hidup 
+            supaya dapat makan dan jangan lupa untuk makan untuk hidup
+        </p>
+        <a href="#recipes" class="btn">Cook Now</a>
+    </div>
+</section>
+
+<!--recipes section-->
+<!--recipes section-->
+<section class="recipes" id="recipes">
+    
+  
+   <h1 class="heading" ><span> recipes</span></h1>
+
+  <div class="box-container">
+
+      <div class="box">
+        <span class="rec">Breakfast</span>
+        <div class="image">
+          <img src="break.png.png" alt="">
+          <div class="icons">
+            <a href="#" class="utensils-btn" onclick="displayRecipeB('breakfast')">Let's Cook</a>
+          </div>
+        </div>
+        <div class="content">
+          <h3>Take a break for your breakfast</h3>
+        </div>
+      </div>
+    
+      <div class="box">
+        <span class="rec">Lunch</span>
+        <div class="image">
+          <img src="lunch.png.png" alt="">
+          <div class="icons">
+            <a href="#" class="utensils-btn" onclick="displayRecipeL('lunch')">Let's Cook</a>
+          </div>
+        </div>
+        <div class="content">
+          <h3>Make sure your belly is full</h3>
+        </div>
+      </div>
+    
+      <div class="box">
+        <span class="rec">Dinner</span>
+        <div class="image">
+          <img src="dinne.png.png" alt="">
+          <div class="icons">
+            <a href="#" class="utensils-btn" onclick="displayRecipeD('dinner')">Let's Cook</a>
+          </div>
+        </div>
+        <div class="content">
+          <h3>Sleep tight after eating good food</h3>
+        </div>
+      </div>
+    </div>
+</section>
+<!--review section-->
+
+<!--contact section-->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="homepage.html">home</a>
+            <a href="aboutus.html">about</a>
+            <a href="homepage.html #recipes">recipes</a>
+            <a href="review.html">review</a>
+            <a href="myacc.php">contacts</a>
+        </div>
+
+    <div class="box">
+        <h3>contact info</h3>
+        <a href="#">0123456789</a>
+        <a href="#">mNm@gmail.com</a>
+        <a href="https://www.google.com/maps/place/Johor/@2.0488817,102.388586,8z/data=!4m6!3m5!1s0x31c4cc3289eddb9f:0x7b6b329bbf0cadb4!8m2!3d1.9343998!4d103.3587288!16zL20vMDFqbmc5?entry=ttu">Johor, Malaysia</a>
+    </div>
+
+    </div>
+</section>
+
+</body>
+</html>
